@@ -26,8 +26,8 @@ jobs:
      - uses: actions/setup-java@v3
        with:
          distribution: 'temurin' # See 'Supported distributions' for available options
-         java-version: '17'
-     - name: Build with Gradle
-       uses: gradle/gradle-build-action@v2
-       with:
-         arguments: build
+         java-version: '17'    
+     - name: Grant Permissions to gradlew
+       run: chmod +x gradlew
+     - name: Test
+       run: ./gradlew clean test

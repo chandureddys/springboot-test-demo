@@ -32,6 +32,7 @@ jobs:
      - name: Test
        run: ./gradlew clean test
      - uses: actions/upload-artifact@v3
+       if: ${{ failure() }}
        with:
         name: Package
-        path: build/reports/tests/test/index.html
+        path: build/reports/tests/test

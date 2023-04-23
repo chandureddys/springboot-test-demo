@@ -21,6 +21,6 @@ internal class TestControllerTest(private val mockMvc: MockMvc) {
     @Test
     fun `should return name`() {
         mockMvc.perform(get("/v1/api"))
-                .andExpect(status().isBadRequest)
+                .andExpect(status().isOk)
     }
 }

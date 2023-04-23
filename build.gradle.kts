@@ -16,9 +16,6 @@ repositories {
     mavenCentral()
 }
 
-val querydslVersion = "4.2.1"
-val swaggerVersion = "2.9.2"
-val swaggerAnnotationVersion = "1.5.21"
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web") {

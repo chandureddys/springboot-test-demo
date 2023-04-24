@@ -32,6 +32,7 @@ jobs:
      - name: build gradle project step
        uses: gradle/gradle-build-action@v2
        with:
+          gradle-version: wrapper
           arguments: test
      - name: Test
        run: ./gradlew clean test
